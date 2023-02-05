@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julie Ann</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Problem #1: CLASS PERCENTAGE</h3>
+    <div id="msg">
+        <div id="error"></div>
+    </div>
+    <br>
+    <label>Number of classess held: </label>
+    <input type="number" id="class_held">
+    <br />
+    <label>Number of classess attended: </label>
+    <input type="number" id="class_attended">
+    <br><br>
+    <button id="btnPercentage" onclick="computePercentage()">Determine Percentage</button>
+    <br><br>
+    <div id="percentageOfClassAttended"></div>
+    <div id="exam"></div>
+    <hr>
+
+    <h3>Problem #2: CURRENCY CONVERSION</h3>
+    <label>Select a currency conversion</label>
+    <select id="convert" onchange="setCurrency()">
+        <option value="">--select conversion--</option>
+        <option value="us_to_peso">US Dollar to PH Peso</option>
+        <option value="peso_to_us"> PH Peso to US Dollar</option>
+
+        <option value="hk_to_peso">HK Dollar to PH Peso</option>
+        <option value="peso_to_hk"> PH Peso to HK Dollar</option>
+
+        <option value="au_to_peso">AU Dollar to PH Peso</option>
+        <option value="peso_to_au"> PH Peso to AU Dollar</option>
+
+        <option value="nz_to_peso">NZ Dollar to PH Peso</option>
+        <option value="peso_to_nz"> PH Peso to NZ Dollar</option>
+
+        <option value="jp_to_peso">JP Yen to PH Peso</option>
+        <option value="peso_to_jp"> PH Peso to JP Yen</option>
+
+        <option value="sa_to_peso">SA (Dinnar) to PH Peso</option>
+        <option value="peso_to_sa"> PH Peso to SA (Dinnar)</option>
+
+        <option value="uk_to_peso">UK Pound to PH Peso</option>
+        <option value="peso_to_uk"> PH Peso to UK Pound</option>
+    </select>
+    <br /><br />
+    <div id="hideDiv">
+        <input type="hidden" id="selected_conversion">
+        <label id="first_conversion"></label>
+        <input type="number" id="first_val" onkeyup="convertCurrency()">
+        <br /> <br />
+        <div id="second_val"></div>
+    </div>
+    <hr>
+
+    <h3>Problem #3: BMI CALCULATOR</h3>
+    <div id="msg1">
+        <div id="error1"></div>
+    </div>
+    <br>
+    <label>Enter Weight in pound (lbs): </label>
+    <input type="number" id="weight">
+    <br><br />
+    <label>Enter Height in ft: </label>
+    <input type="number" id="ft" min="0">
+    <label>inch: </label>
+    <input type="number" id="inch" min="0">
+    <br><br>
+    <button onclick="computeBMI()">Compute BMI</button>
+    <br><br>
+    <div id="bmi"></div>
+
+    <h4>Categories: </h4>
+    <ul>
+        <li>Underweight = <18.5 </li>
+        <li>Normal Weight = 18.5 - 24.9 </li>
+        <li>Overweight = 25 - 29.9 </li>
+        <li>Obsity = 30 or greater </li>
+    </ul>
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
